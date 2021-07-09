@@ -9,3 +9,20 @@
 body {
     background-color: rgb(187, 149, 168);
 }
+
+/* navbar_section */
+.nav_section .navbar-brand{ font-size: 30px;
+}
+
+.nav_section .navbar-brand span{
+    color: brown;
+}
+
+.nav_section .navbar-nav li {
+    margin: 0px 15px;
+}
+
+.nav_section .navbar-nav li a {
+    color: #fff !important;
+    font-size: 20px;
+}
