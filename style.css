@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,700&display=swap')
+@media only screen and (min-width: 1000px) {
+  /* place here CSS for when the screen is more than 1000px wide */
+  .card {
+    width: 50%;
+  }
+}
 
-@media screen {   
-}(max-width: 1200px) and (min-width: 993px){
-.hero_section h1 {
-    font-size: 57px;
-}
-}
-
-* {font-family: 'Roboto Condensed', sans-serif;
-}
+* {font-family: 'Roboto Condensed', sans-serif;}
 
 body {
-    background-color: rgb(41, 44, 44);
+    background-color: rgb(32, 44, 44);
+
     /* background-image: url(./assets/maxresdefault.jpg) ; */
 }
 h1, h2, h3, h4, h5, h6, p,span, td, a {
@@ -19,11 +18,11 @@ h1, h2, h3, h4, h5, h6, p,span, td, a {
 }
 
 /* navbar_section */
-.nav_section .navbar-brand{ font-size: 30px;
+.nav_section .navbar-brand{ font-size: 35px;
 }
 
 .nav_section .navbar-brand span{
-    color: brown;
+    color: rgb(92, 17, 17);
 }
 
 .nav_section .navbar-nav li {
@@ -32,7 +31,7 @@ h1, h2, h3, h4, h5, h6, p,span, td, a {
 
 .nav_section .navbar-nav li a {
     color: #fff !important;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .nav_section .navbar-nav .nav-link::before{
@@ -75,7 +74,7 @@ h1, h2, h3, h4, h5, h6, p,span, td, a {
     content: '';
     text-align: center;
     width: 80px;
-    background-color: rgb(48, 12, 48);
+    background-color: rgb(145, 132, 145);
     height: 2px
 }
 
@@ -90,10 +89,10 @@ h1, h2, h3, h4, h5, h6, p,span, td, a {
     font-size: 22px;
 }
 .hero_section .row p {
-    line-height: 20px;
-    font-size: 15px;
+    line-height: 21px;
+    font-size: 20px;
     margin-top: 12px;
-    color: rgb(10, 1, 10)
+    color: #999
 }
 
 .hero_section .row button {
@@ -126,15 +125,5 @@ canvas.particles-js-canvas-el {
     right: 0;
     top: 0;
 }
-/* Footer */
-footer {
-    display: flex;
-    flex-wrap: wrap;
-    background: #112;
-    height: auto;
-    position: relative;
-    justify-content: space-between;
-    padding: 40px 90px;
-    width: 100%;
-    
-}
+
+
