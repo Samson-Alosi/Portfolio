@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,700&display=swap')
 
-@media screen {
-    
-} (max-width: 1200px) and (min-width: 993px){
+@media screen {   
+}(max-width: 1200px) and (min-width: 993px){
 .hero_section h1 {
     font-size: 57px;
 }
@@ -126,4 +125,16 @@ canvas.particles-js-canvas-el {
     left: 0;
     right: 0;
     top: 0;
+}
+/* Footer */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    background: #112;
+    height: auto;
+    position: relative;
+    justify-content: space-between;
+    padding: 40px 90px;
+    width: 100%;
+    
 }
