@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: rgb(187, 149, 168);
+    background-color: rgb(56, 54, 55);
 }
 
 /* navbar_section */
@@ -25,4 +25,26 @@ body {
 .nav_section .navbar-nav li a {
     color: #fff !important;
     font-size: 20px;
+}
+
+.nav_section .navbar-nav .nav-link::before{
+    background-color: #fff;
+    position: absolute;
+    content: '';
+    height: 0px;
+    width: 0px;
+    transition: 0.3s;
+    bottom: 8px;
+}
+.nav_section .navbar-nav .nav-link:hover::before{
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    width: 40px;
+    height: 2.5px;
+}
+.hero_section .row {
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
