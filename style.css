@@ -165,6 +165,7 @@ section h3 {
     
     font-style: oblique;
     font-weight: bold;
+   
 }
 
 section p {
@@ -174,10 +175,11 @@ section p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 42px;
 }
-h3 {
+h4 {
     text-align: center;
     margin-top: 20px;
     font-size: 50px;
+    color: #fff;
 }
 
 .skills-area {
@@ -271,5 +273,6 @@ h3 {
     }
 }
 .container-1 {height: auto;
-    
 }
+
+
