@@ -118,6 +118,14 @@ h1, h2, h3, h4, h5, h6, p,span, td, a {
 .hero_section .row img {
     width: 400px;
     border-radius: 60%;
+    border-radius: 60%;
+    border: 5px dotted #ddd;
+    max-width: 100%;
+    display: block;
+}
+.hero_section .row img:hover {
+    transform: scaleX(-1);
+    background-color: rgb(125, 67, 148);
 }
 canvas.particles-js-canvas-el {
     height: 100% !important;
@@ -180,6 +188,8 @@ h4 {
     margin-top: 20px;
     font-size: 50px;
     color: #fff;
+    font-style: oblique;
+    font-weight: 800;
 }
 
 .skills-area {
@@ -274,5 +284,6 @@ h4 {
 }
 .container-1 {height: auto;
 }
+ 
 
 
