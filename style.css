@@ -142,13 +142,34 @@ canvas.particles-js-canvas-el {
     font-style: italic;
 }
 section {
-    background-color: rgb(67, 89, 97);
+    background-color: rgb(130, 162, 174);
     height: auto;
     padding: 50px 0px 50px 0px;
+    opacity: 0.8;
 }
 section img {
         border-radius: 60%;
         border: 5px dotted #ddd;
         max-width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0.88;
        
+}
+section img:hover {
+    transform: scaleX(-1);
+    background-color: rgb(242, 20, 20);
+}
+section h3 {
+    
+    font-style: oblique;
+    font-weight: bold;
+}
+
+section p {
+    color: rgb(39, 23, 23);
+    font-size: larger;
+    font-weight: 800;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
