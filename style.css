@@ -144,7 +144,7 @@ canvas.particles-js-canvas-el {
 section {
     background-color: rgb(130, 162, 174);
     height: auto;
-    padding: 50px 0px 50px 0px;
+    padding: 80px 0px 80px 0px;
     opacity: 0.8;
 }
 section img {
@@ -177,24 +177,24 @@ section p {
 h3 {
     text-align: center;
     margin-top: 20px;
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .skills-area {
     display: flex;
     flex-direction: column;
-    padding: 0 10%;
+    padding: 0 200px;
 }
 
 .skill {
     position: relative;
-    margin-bottom: 35px;
+    margin-bottom: 21px;
 }
 
 .skill-title {
-    font-size: 40px;
-    margin-bottom: 10px;
-    color: #fff;
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: rgb(201, 178, 178);
 }
 .skill-bar {
     z-index: -1;
@@ -207,7 +207,7 @@ h3 {
 }
 
 .skill-fill{
-    height: 30px;
+    height: 32px;
     background: rgb(61, 61, 145);
     overflow: hidden;
     justify-content: flex-end;
@@ -221,19 +221,19 @@ h3 {
 
 }
 .html {
-    animation: html 2s;
+    animation: html 1s;
     width: 90%;
 }
 .css {
-    animation: css 2s;
+    animation: css 1s;
     width: 85%;
 }
 .js {
-    animation: js 2s;
+    animation: js 1s;
     width: 75%;
 }
 .bootstrap {
-    animation: bootstrap 2s;
+    animation: bootstrap 1s;
     width: 80%;
 }
 @keyframes html {
@@ -270,6 +270,6 @@ h3 {
         width: 80%;
     }
 }
-/* .container-1 { */
-    background: rgb(140, 134, 134);
+.container-1 {height: auto;
+    
 }
