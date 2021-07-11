@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5, h6, p,span, td, a {
 .hero_section .row button:hover {
     animation: swing;
     animation-duration: 0.8s;
-    color: rgb(1, 1, 2);
+    color: rgb(19, 19, 33);
     background: #fff;
     border-color:#fff ;
 }
@@ -128,5 +128,6 @@ canvas.particles-js-canvas-el {
 .fa {font-size: 26px;
     
 }
-
-
+.col h5 {
+    color: #fff;
+}
