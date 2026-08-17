@@ -254,26 +254,30 @@
               <div><i class="fa-solid fa-phone"></i> +250795689260 / +254721650402</div>
               <div><i class="fa-solid fa-envelope"></i> Sam.clinicalpsychology@gmail.com</div>
               <div><i class="fa-solid fa-location-dot"></i> University of Rwanda, Huye</div>
+              <div>
+                <i class="fa-solid fa-calendar-check"></i>
+                <a href="https://calendly.com/" target="_blank" rel="noopener noreferrer">Book a consultation</a>
+              </div>
             </div>
           </div>
-          <form class="contact-form">
+          <form class="contact-form" action="https://formspree.io/f/xjvqovpl" method="POST">
             <div class="form-row">
               <div class="col-md-6 form-group">
                 <label for="firstName">First name</label>
-                <input type="text" id="firstName" placeholder="Your first name" />
+                <input type="text" id="firstName" name="firstName" placeholder="Your first name" required />
               </div>
               <div class="col-md-6 form-group">
                 <label for="lastName">Last name</label>
-                <input type="text" id="lastName" placeholder="Your last name" />
+                <input type="text" id="lastName" name="lastName" placeholder="Your last name" required />
               </div>
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" placeholder="you@example.com" />
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
             </div>
             <div class="form-group">
               <label for="interest">I am seeking support with</label>
-              <select id="interest">
+              <select id="interest" name="interest">
                 <option>Anxiety & stress</option>
                 <option>Trauma recovery</option>
                 <option>Relationships</option>
@@ -283,7 +287,7 @@
             </div>
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" rows="4" placeholder="Tell me a little about what you are going through."></textarea>
+              <textarea id="message" name="message" rows="4" placeholder="Tell me a little about what you are going through." required></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-block">Send inquiry</button>
           </form>

@@ -17,8 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const contactForm = document.querySelector(".contact-form");
   if (contactForm) {
-    contactForm.addEventListener("submit", function (event) {
-      event.preventDefault();
+    contactForm.addEventListener("submit", function () {
       const button = contactForm.querySelector("button[type='submit']");
       const originalText = button.textContent;
 
