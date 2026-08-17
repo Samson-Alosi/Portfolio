@@ -1,18 +1,35 @@
-mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
+document.addEventListener("DOMContentLoaded", function () {
+  const year = document.getElementById("year");
+  if (year) {
+    year.textContent = new Date().getFullYear();
   }
-}
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
+  const navToggle = document.querySelector(".navbar-toggler");
+  const navMenu = document.getElementById("mainNav");
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", function () {
+      const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+      navToggle.setAttribute("aria-expanded", String(!isExpanded));
+      navMenu.classList.toggle("show");
+    });
+  }
+
+  const contactForm = document.querySelector(".contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const button = contactForm.querySelector("button[type='submit']");
+      const originalText = button.textContent;
+
+      button.textContent = "Inquiry sent";
+      button.disabled = true;
+
+      setTimeout(function () {
+        button.textContent = originalText;
+        button.disabled = false;
+        contactForm.reset();
+      }, 2000);
+    });
+  }
+});
