@@ -17,6 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const contactForm = document.querySelector(".contact-form");
   if (contactForm) {
+    contactForm.reset();
+
+    window.addEventListener("pageshow", function () {
+      contactForm.reset();
+    });
+
     contactForm.addEventListener("submit", function () {
       const button = contactForm.querySelector("button[type='submit']");
       const originalText = button.textContent;
