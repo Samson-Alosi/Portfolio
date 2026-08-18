@@ -25,45 +25,40 @@
         </div>
 
         <div id="posts" class="row blog-grid">
-          <!-- Posts will be rendered here -->
-          <div class="col-12">
-            <p>Loading posts…</p>
+            <!-- Posts will be rendered here -->
+            <div class="col-12">
+              <p>Loading posts…</p>
+            </div>
           </div>
-        </div>
       </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-      // Simple client-side posts listing for markdown files in /posts
-      const posts = [
-        {
-          title: "Understanding anxiety: small steps you can take",
-          date: "2026-08-18",
-          excerpt: "Practical ways to notice and manage early anxiety signs.",
-          slug: "sample-first-post"
-        }
-      ];
-
+      // Load posts index generated at /posts/index.json
       const postsEl = document.getElementById('posts');
-      postsEl.innerHTML = '';
-
-      posts.forEach(p => {
-        const col = document.createElement('div');
-        col.className = 'col-lg-4 col-md-6';
-
-        col.innerHTML = `
-          <article class="blog-card">
-            <div class="blog-content">
-              <span class="meta">${p.date}</span>
-              <h3>${p.title}</h3>
-              <p>${p.excerpt}</p>
-              <a href="/blog/post.html?post=${p.slug}">Read article</a>
-            </div>
-          </article>
-        `;
-
-        postsEl.appendChild(col);
+      fetch('/posts/index.json').then(r=>{
+        if(!r.ok) throw new Error('posts index not found');
+        return r.json();
+      }).then(posts => {
+        postsEl.innerHTML = '';
+        posts.forEach(p => {
+          const col = document.createElement('div');
+          col.className = 'col-lg-4 col-md-6';
+          col.innerHTML = `
+            <article class="blog-card">
+              <div class="blog-content">
+                <span class="meta">${p.date || ''}</span>
+                <h3>${p.title}</h3>
+                <p>${p.excerpt || ''}</p>
+                <a href="/blog/post.html?post=${p.slug}">Read article</a>
+              </div>
+            </article>
+          `;
+          postsEl.appendChild(col);
+        });
+      }).catch(err=>{
+        postsEl.innerHTML = '<div class="col-12"><p>No posts found.</p></div>';
       });
     </script>
   </body>

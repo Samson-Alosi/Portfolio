@@ -1,0 +1,7 @@
+{
+  "name": "samson-portfolio",
+  "version": "1.0.0",
+  "scripts": {
+    "build-posts-index": "node scripts/generate-posts-index.js"
+  }
+}
