@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Blog — Samson Alosi Obongo</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <div class="container nav-inner">
+          <a class="navbar-brand" href="/index.html">
+            <span class="brand-mark">Samson Alosi Obongo</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="section-heading text-center">
+          <p class="eyebrow">Insights & blog</p>
+          <h2>Helpful resources for emotional wellbeing.</h2>
+        </div>
+
+        <div id="posts" class="row blog-grid">
+          <!-- Posts will be rendered here -->
+          <div class="col-12">
+            <p>Loading posts…</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      // Simple client-side posts listing for markdown files in /posts
+      const posts = [
+        {
+          title: "Understanding anxiety: small steps you can take",
+          date: "2026-08-18",
+          excerpt: "Practical ways to notice and manage early anxiety signs.",
+          slug: "sample-first-post"
+        }
+      ];
+
+      const postsEl = document.getElementById('posts');
+      postsEl.innerHTML = '';
+
+      posts.forEach(p => {
+        const col = document.createElement('div');
+        col.className = 'col-lg-4 col-md-6';
+
+        col.innerHTML = `
+          <article class="blog-card">
+            <div class="blog-content">
+              <span class="meta">${p.date}</span>
+              <h3>${p.title}</h3>
+              <p>${p.excerpt}</p>
+              <a href="/blog/post.html?post=${p.slug}">Read article</a>
+            </div>
+          </article>
+        `;
+
+        postsEl.appendChild(col);
+      });
+    </script>
+  </body>
+</html>
