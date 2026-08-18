@@ -452,6 +452,84 @@ blockquote footer {
   color: var(--primary-dark);
 }
 
+.helpline-section {
+  background: linear-gradient(180deg, #f7f0ee 0%, #f3e8e3 100%);
+}
+
+.helpline-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.helpline-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 1.5rem 1.1rem;
+  box-shadow: 0 8px 22px rgba(71, 42, 48, 0.04);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.helpline-card.urgent {
+  border-color: rgba(122, 79, 88, 0.28);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(244, 231, 226, 0.9));
+}
+
+.helpline-tag {
+  display: inline-flex;
+  align-self: flex-start;
+  background: rgba(122, 79, 88, 0.08);
+  color: var(--primary-dark);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.helpline-card h3 {
+  font-size: 1.8rem;
+  line-height: 1.1;
+  margin-bottom: 0.7rem;
+  color: var(--primary-dark);
+}
+
+.helpline-number {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+}
+
+.helpline-card p {
+  margin-bottom: 0.8rem;
+  font-size: 0.96rem;
+}
+
+.helpline-card a {
+  color: var(--primary-dark);
+  font-weight: 700;
+  margin-top: auto;
+}
+
+.helpline-note {
+  margin-top: 2rem;
+  background: rgba(122, 79, 88, 0.08);
+  border: 1px solid rgba(122, 79, 88, 0.12);
+  border-radius: 18px;
+  padding: 1rem 1.2rem;
+  color: var(--text);
+  font-weight: 600;
+  text-align: center;
+}
+
 .contact {
   background: linear-gradient(180deg, #fffdfb 0%, #f3eae7 100%);
 }
@@ -603,6 +681,10 @@ blockquote footer {
     grid-template-columns: 1fr;
   }
 
+  .helpline-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .portrait-card img {
     height: 540px;
   }
@@ -676,8 +758,13 @@ blockquote footer {
   .blog-card,
   .contact-form,
   .contact-details,
-  .image-frame {
+  .image-frame,
+  .helpline-card {
     margin-bottom: 1rem;
+  }
+
+  .helpline-grid {
+    grid-template-columns: 1fr;
   }
 
   .contact-details div {
