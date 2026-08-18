@@ -430,6 +430,24 @@ p {
   color: var(--primary-dark);
 }
 
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin: 1rem 0 1.5rem;
+  padding: 0.9rem 1rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(122, 79, 88, 0.03);
+}
+
+.article-meta p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
 .blog-content a {
   font-weight: 700;
   color: var(--primary-dark);

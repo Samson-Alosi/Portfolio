@@ -1,9 +1,23 @@
 [
   {
-    "slug": "sample-first-post",
-    "title": "Understanding anxiety: small steps you can take",
+    "slug": "anxiety-signs",
+    "title": "How to recognize anxiety before it takes over your day",
     "date": "2026-08-18",
-    "excerpt": "Practical ways to notice and manage early anxiety signs.",
+    "excerpt": "Simple signs of anxiety and practical ways to respond before it grows overwhelming.",
+    "author": "Samson Alosi Obongo"
+  },
+  {
+    "slug": "communication-conflict",
+    "title": "Three ways to communicate more openly during conflict",
+    "date": "2026-08-18",
+    "excerpt": "Practical ways to speak honestly, listen well, and reduce defensiveness during conflict.",
+    "author": "Samson Alosi Obongo"
+  },
+  {
+    "slug": "nervous-system-reset",
+    "title": "Small rituals that help reset your nervous system",
+    "date": "2026-08-18",
+    "excerpt": "Gentle habits that help calm stress, increase grounding, and restore balance throughout the day.",
     "author": "Samson Alosi Obongo"
   }
 ]
