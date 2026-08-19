@@ -38,6 +38,24 @@
 
         <section class="comments-wrap" style="margin-top: 2rem;">
           <h3>Comments</h3>
+          <!-- Disqus embed: replace SHORTNAME with your Disqus shortname -->
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+              this.page.url = window.location.href;
+              this.page.identifier = location.pathname + location.search;
+            };
+            (function() {
+              var d = document, s = d.createElement('script');
+              s.src = 'https://sam-clinical-psychologist.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+
+          <!-- Giscus fallback (commented). To restore Giscus, remove the comment markers and optionally remove Disqus. -->
+          <!--
           <script src="https://giscus.app/client.js"
             data-repo="Samson-Alosi/Portfolio"
             data-repo-id="MDEwOlJlcG9zaXRvcnkzODM0MzQ0NDI="
@@ -53,6 +71,7 @@
             crossorigin="anonymous"
             async>
           </script>
+          -->
         </section>
       </div>
     </main>
