@@ -802,4 +802,25 @@ blockquote footer {
   }
 }
 
+/* WhatsApp floating button */
+.whatsapp-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  background: #25D366;
+  color: #fff;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+  z-index: 9999;
+  text-decoration: none;
+}
+.whatsapp-float:hover { transform: translateY(-2px); }
+.whatsapp-float i { font-size: 22px; }
+
+
 
