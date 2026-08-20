@@ -634,6 +634,16 @@ blockquote footer {
   margin-top: 0.8rem;
 }
 
+.booking-cta-wrap {
+  margin-top: 1.5rem;
+}
+
+.booking-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
 .site-footer {
   background: #201919;
   color: #f7f1f0;

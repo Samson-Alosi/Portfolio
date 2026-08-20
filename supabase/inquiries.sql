@@ -1,25 +1,25 @@
-create table if not exists public.inquiries (
-  id uuid primary key default gen_random_uuid(),
+CREATE TABLE IF NOT EXISTS public.inquiries (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   first_name text,
   last_name text,
   email text,
   interest text,
   message text,
-  source text default 'website',
-  created_at timestamptz not null default now()
+  source text DEFAULT 'website',
+  created_at timestamptz NOT NULL DEFAULT now()
 );
 
-alter table public.inquiries enable row level security;
+ALTER TABLE public.inquiries ENABLE ROW LEVEL SECURITY;
 
-create policy "Allow public inserts"
-  on public.inquiries
-  for insert
-  with check (true);
+CREATE POLICY "Allow public inserts"
+  ON public.inquiries
+  FOR INSERT
+  WITH CHECK (true);
 
-create policy "Allow authenticated reads"
-  on public.inquiries
-  for select
-  using (auth.uid() is not null);
+CREATE POLICY "Allow authenticated reads"
+  ON public.inquiries
+  FOR SELECT
+  USING (auth.uid() IS NOT NULL);
 
-create index if not exists inquiries_created_at_idx
-  on public.inquiries (created_at desc);
+CREATE INDEX IF NOT EXISTS inquiries_created_at_idx
+  ON public.inquiries (created_at DESC);
