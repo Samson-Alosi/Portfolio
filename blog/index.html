@@ -75,16 +75,27 @@
         posts.forEach(p => {
           const col = document.createElement('div');
           col.className = 'col-lg-4 col-md-6';
-          col.innerHTML = `
-            <article class="blog-card">
-              <div class="blog-content">
-                <span class="meta">${p.date || ''}</span>
-                <h3>${p.title}</h3>
-                <p>${p.excerpt || ''}</p>
-                <a href="/blog/post.html?post=${p.slug}">Read article</a>
-              </div>
-            </article>
-          `;
+          const article = document.createElement('article');
+          article.className = 'blog-card';
+          const content = document.createElement('div');
+          content.className = 'blog-content';
+          const date = document.createElement('span');
+          date.className = 'meta';
+          date.textContent = p.date || '';
+          const title = document.createElement('h3');
+          const titleLink = document.createElement('a');
+          titleLink.className = 'blog-title-link';
+          titleLink.href = `/blog/post.html?post=${encodeURIComponent(p.slug || '')}`;
+          titleLink.textContent = p.title || 'Untitled';
+          title.appendChild(titleLink);
+          const excerpt = document.createElement('p');
+          excerpt.textContent = p.excerpt || '';
+          const readLink = document.createElement('a');
+          readLink.href = titleLink.href;
+          readLink.textContent = 'Read article';
+          content.append(date, title, excerpt, readLink);
+          article.appendChild(content);
+          col.appendChild(article);
           postsEl.appendChild(col);
         });
       }).catch(err=>{

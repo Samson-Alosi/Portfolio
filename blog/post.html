@@ -50,51 +50,64 @@
 
     <main class="section">
       <div class="container">
-        <article id="post" class="blog-card">
-          <div class="blog-content">
-            <span id="post-date" class="meta"></span>
-            <h1 id="post-title"></h1>
-            <div id="post-body"></div>
+        <div class="row post-layout">
+          <div class="col-lg-8">
+            <article id="post" class="blog-card post-article">
+              <div class="blog-content">
+                <span id="post-date" class="meta"></span>
+                <h1 id="post-title"></h1>
+                <div id="post-body"></div>
+              </div>
+            </article>
+
+            <section class="comments-wrap">
+              <h3>Comments</h3>
+              <!-- Disqus embed: replace SHORTNAME with your Disqus shortname -->
+              <div id="disqus_thread"></div>
+              <script>
+                var disqus_config = function () {
+                  this.page.url = window.location.href;
+                  this.page.identifier = location.pathname + location.search;
+                };
+                (function() {
+                  var d = document, s = d.createElement('script');
+                  s.src = 'https://sam-clinical-psychologist.disqus.com/embed.js';
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                })();
+              </script>
+              <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+
+              <!-- Giscus fallback (commented). To restore Giscus, remove the comment markers and optionally remove Disqus. -->
+              <!--
+              <script src="https://giscus.app/client.js"
+                data-repo="Samson-Alosi/Portfolio"
+                data-repo-id="MDEwOlJlcG9zaXRvcnkzODM0MzQ0NDI="
+                data-category="General"
+                data-category-id="DIC_kwDOFtq-ys4DDqwL"
+                data-mapping="pathname"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="bottom"
+                data-theme="light"
+                data-lang="en"
+                crossorigin="anonymous"
+                async>
+              </script>
+              -->
+            </section>
           </div>
-        </article>
 
-        <section class="comments-wrap" style="margin-top: 2rem;">
-          <h3>Comments</h3>
-          <!-- Disqus embed: replace SHORTNAME with your Disqus shortname -->
-          <div id="disqus_thread"></div>
-          <script>
-            var disqus_config = function () {
-              this.page.url = window.location.href;
-              this.page.identifier = location.pathname + location.search;
-            };
-            (function() {
-              var d = document, s = d.createElement('script');
-              s.src = 'https://sam-clinical-psychologist.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-            })();
-          </script>
-          <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-
-          <!-- Giscus fallback (commented). To restore Giscus, remove the comment markers and optionally remove Disqus. -->
-          <!--
-          <script src="https://giscus.app/client.js"
-            data-repo="Samson-Alosi/Portfolio"
-            data-repo-id="MDEwOlJlcG9zaXRvcnkzODM0MzQ0NDI="
-            data-category="General"
-            data-category-id="DIC_kwDOFtq-ys4DDqwL"
-            data-mapping="pathname"
-            data-strict="0"
-            data-reactions-enabled="1"
-            data-emit-metadata="0"
-            data-input-position="bottom"
-            data-theme="light"
-            data-lang="en"
-            crossorigin="anonymous"
-            async>
-          </script>
-          -->
-        </section>
+          <aside class="col-lg-4 related-posts-column" aria-labelledby="related-posts-title">
+            <section class="related-posts">
+              <h2 id="related-posts-title">More articles</h2>
+              <div id="related-posts-list" aria-live="polite">
+                <p>Loading articles...</p>
+              </div>
+            </section>
+          </aside>
+        </div>
       </div>
     </main>
 
@@ -106,8 +119,10 @@
       }
 
       const slug = qs('post');
+      const relatedPostsEl = document.getElementById('related-posts-list');
       if(!slug){
         document.getElementById('post').innerHTML = '<p>No post specified.</p>';
+        relatedPostsEl.textContent = 'Open an article to see more posts.';
       } else {
         const mdPath = `/posts/${slug}.md`;
         fetch(mdPath).then(r => {
@@ -136,6 +151,35 @@
           document.getElementById('post-body').innerHTML = marked.parse(body);
         }).catch(err => {
           document.getElementById('post').innerHTML = '<p>Could not load post.</p>';
+        });
+
+        fetch('/posts/index.json').then(response => {
+          if (!response.ok) throw new Error('Posts index not found');
+          return response.json();
+        }).then(posts => {
+          const otherPosts = posts.filter(post => post.slug && post.slug !== slug);
+          relatedPostsEl.replaceChildren();
+
+          if (!otherPosts.length) {
+            relatedPostsEl.textContent = 'No other articles yet.';
+            return;
+          }
+
+          otherPosts.forEach(post => {
+            const item = document.createElement('article');
+            item.className = 'related-post-item';
+            const link = document.createElement('a');
+            link.className = 'related-post-link blog-title-link';
+            link.href = `/blog/post.html?post=${encodeURIComponent(post.slug)}`;
+            link.textContent = post.title || 'Untitled';
+            const date = document.createElement('span');
+            date.className = 'related-post-date';
+            date.textContent = post.date || '';
+            item.append(link, date);
+            relatedPostsEl.appendChild(item);
+          });
+        }).catch(() => {
+          relatedPostsEl.textContent = 'More articles are unavailable right now.';
         });
       }
     </script>
