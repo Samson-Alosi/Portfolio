@@ -68,18 +68,27 @@ p {
   position: sticky;
   top: 0;
   z-index: 999;
-  background: rgba(246, 241, 238, 0.85);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line);
+  padding: 12px 20px 0;
+  background: transparent;
 }
 
 .nav-inner {
   display: flex;
   align-items: center;
+  width: 100%;
+  max-width: none;
+  padding: 0;
 }
 
-.navbar {
-  padding: 1rem 0;
+.site-header .navbar {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 253, 251, 0.92);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 30px rgba(71, 42, 48, 0.09);
 }
 
 .navbar-brand {
@@ -89,11 +98,41 @@ p {
   color: var(--text) !important;
 }
 
+.site-header .navbar-brand {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.65rem;
+  margin-right: 1rem;
+}
+
+.nav-brand-icon {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+}
+
 .brand-mark {
   font-family: "Cormorant Garamond", serif;
   font-size: 2rem;
   font-weight: 700;
   color: var(--primary-dark);
+}
+
+.site-header .brand-mark {
+  font-size: 1.4rem;
+  line-height: 1.05;
+  white-space: nowrap;
 }
 
 .navbar-brand small {
@@ -103,8 +142,17 @@ p {
   color: var(--muted);
 }
 
+.site-header .navbar-brand small {
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+}
+
 .navbar-nav {
   align-items: center;
+}
+
+.site-header .navbar-nav {
+  gap: 0.15rem;
 }
 
 .nav-link {
@@ -113,9 +161,32 @@ p {
   margin: 0 0.7rem;
 }
 
+.site-header .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.65rem 0.75rem;
+  margin: 0;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.site-header .nav-link i {
+  color: var(--primary);
+  opacity: 0.82;
+}
+
 .nav-link:hover,
 .nav-link:focus {
   color: var(--primary) !important;
+}
+
+.site-header .nav-link:hover,
+.site-header .nav-link:focus,
+.site-header .nav-link.active {
+  background: var(--surface-soft);
+  color: var(--primary-dark) !important;
 }
 
 .nav-cta,
@@ -124,6 +195,20 @@ p {
   padding: 0.9rem 1.6rem;
   font-weight: 600;
   transition: 0.25s ease;
+}
+
+.site-header .nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 0.5rem;
+  padding: 0.72rem 1.15rem;
+  white-space: nowrap;
+}
+
+.site-header .navbar-toggler {
+  border-color: var(--line);
+  border-radius: 50%;
 }
 
 .btn-primary {
@@ -748,8 +833,34 @@ blockquote footer {
 }
 
 @media (max-width: 991px) {
+  .site-header {
+    padding: 10px 12px 0;
+  }
+
+  .site-header .navbar {
+    border-radius: 24px;
+    padding: 0.55rem 0.7rem;
+  }
+
   .navbar-collapse {
     padding-top: 1rem;
+  }
+
+  .site-header .navbar-collapse {
+    padding: 0.6rem 0.1rem 0.2rem;
+  }
+
+  .site-header .navbar-nav {
+    align-items: stretch;
+    gap: 0.15rem;
+  }
+
+  .site-header .nav-link {
+    justify-content: flex-start;
+  }
+
+  .site-header .nav-cta {
+    margin: 0.5rem 0 0;
   }
 
   .nav-cta {
@@ -776,6 +887,10 @@ blockquote footer {
 
   .brand-mark {
     font-size: 1.7rem;
+  }
+
+  .site-header .brand-mark {
+    font-size: 1.2rem;
   }
 
   .navbar-brand small {
