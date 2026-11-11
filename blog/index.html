@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/style.css">
+    <script src="/supabase-config.js"></script>
     <!-- Google Analytics: Global site tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0S1QR9VQ7S"></script>
     <script>
@@ -63,6 +64,7 @@
       </div>
     </main>
 
+    <script src="/blog-views.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
       // Load posts index generated at /posts/index.json
@@ -82,6 +84,16 @@
           const date = document.createElement('span');
           date.className = 'meta';
           date.textContent = p.date || '';
+          const views = document.createElement('span');
+          views.className = 'view-count';
+          views.dataset.viewCount = p.slug || '';
+          views.hidden = true;
+          const eye = document.createElement('i');
+          eye.className = 'fa-regular fa-eye';
+          eye.setAttribute('aria-hidden', 'true');
+          const viewValue = document.createElement('span');
+          viewValue.dataset.viewCountValue = '';
+          views.append(eye, viewValue);
           const title = document.createElement('h3');
           const titleLink = document.createElement('a');
           titleLink.className = 'blog-title-link';
@@ -93,11 +105,17 @@
           const readLink = document.createElement('a');
           readLink.href = titleLink.href;
           readLink.textContent = 'Read article';
-          content.append(date, title, excerpt, readLink);
+          content.append(date, views, title, excerpt, readLink);
           article.appendChild(content);
           col.appendChild(article);
           postsEl.appendChild(col);
         });
+        window.BlogViews.getCounts(posts.map(post => post.slug)).then(counts => {
+          postsEl.querySelectorAll('[data-view-count]').forEach(element => {
+            const count = counts[element.dataset.viewCount];
+            if (Number.isFinite(count)) window.BlogViews.renderCount(element, count);
+          });
+        }).catch(() => {});
       }).catch(err=>{
         postsEl.innerHTML = '<div class="col-12"><p>No posts found.</p></div>';
       });

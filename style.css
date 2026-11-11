@@ -557,6 +557,37 @@ p {
   text-transform: uppercase;
 }
 
+.view-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0 0 0.8rem 0.75rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.view-count[hidden] {
+  display: none;
+}
+
+.view-count i {
+  color: var(--primary);
+}
+
+.post-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.post-stats .meta,
+.post-stats .view-count {
+  margin-bottom: 0.8rem;
+}
+
 .blog-content h3 {
   font-size: 2rem;
   line-height: 1.05;

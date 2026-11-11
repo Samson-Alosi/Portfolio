@@ -19,12 +19,7 @@
       gtag('js', new Date());
       gtag('config', 'G-0S1QR9VQ7S', { 'send_page_view': true });
     </script>
-    <script>
-      window.SUPABASE_CONFIG = {
-        url: 'https://vqmdguvminutfyvqzbpo.supabase.co',
-        anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZxbWRndXZtaW51dGZ5dnF6YnBvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcyNDYwNzgsImV4cCI6MjEwMjgyMjA3OH0.XM64deRPG1j_Ix5RjUN4QBKwypLb7Cyt4o3vy1e4M00'
-      };
-    </script>
+      <script src="/supabase-config.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -222,6 +217,7 @@
                 <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" alt="Person reflecting in calm environment" />
                 <div class="blog-content">
                   <span class="meta">Anxiety • 5 min read</span>
+                  <span class="view-count" data-view-count="anxiety-signs" hidden><i class="fa-regular fa-eye" aria-hidden="true"></i><span data-view-count-value></span></span>
                   <h3><a class="blog-title-link" href="/blog/post.html?post=anxiety-signs">How to recognize anxiety before it takes over your day</a></h3>
                   <a href="/blog/post.html?post=anxiety-signs" target="_blank" rel="noopener noreferrer">Read article</a>
                 </div>
@@ -232,6 +228,7 @@
                 <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80" alt="Couple talking" />
                 <div class="blog-content">
                   <span class="meta">Relationships • 4 min read</span>
+                  <span class="view-count" data-view-count="communication-conflict" hidden><i class="fa-regular fa-eye" aria-hidden="true"></i><span data-view-count-value></span></span>
                   <h3><a class="blog-title-link" href="/blog/post.html?post=communication-conflict">Three ways to communicate more openly during conflict</a></h3>
                   <a href="/blog/post.html?post=communication-conflict" target="_blank" rel="noopener noreferrer">Read article</a>
                 </div>
@@ -242,6 +239,7 @@
                 <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80" alt="Woman journaling outdoors" />
                 <div class="blog-content">
                   <span class="meta">Wellbeing • 6 min read</span>
+                  <span class="view-count" data-view-count="nervous-system-reset" hidden><i class="fa-regular fa-eye" aria-hidden="true"></i><span data-view-count-value></span></span>
                   <h3><a class="blog-title-link" href="/blog/post.html?post=nervous-system-reset">Small rituals that help reset your nervous system</a></h3>
                   <a href="/blog/post.html?post=nervous-system-reset" target="_blank" rel="noopener noreferrer">Read article</a>
                 </div>
@@ -412,6 +410,15 @@
       </div>
     </footer>
 
+    <script src="/blog-views.js"></script>
+    <script>
+      window.BlogViews.getCounts(['anxiety-signs', 'communication-conflict', 'nervous-system-reset']).then(function (counts) {
+        document.querySelectorAll('[data-view-count]').forEach(function (element) {
+          const count = counts[element.dataset.viewCount];
+          if (Number.isFinite(count)) window.BlogViews.renderCount(element, count);
+        });
+      }).catch(function () {});
+    </script>
     <script src="script.js"></script>
     <!-- WhatsApp floating button -->
     <a href="https://wa.me/250795689260?text=Hi%20Samson%2C%20I%27d%20like%20to%20talk%20about%20my%20mental%20health" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">

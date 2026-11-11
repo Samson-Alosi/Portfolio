@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/style.css">
+    <script src="/supabase-config.js"></script>
 
     <!-- Google Analytics (replace with your measurement ID) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0S1QR9VQ7S"></script>
@@ -54,7 +55,10 @@
           <div class="col-lg-8">
             <article id="post" class="blog-card post-article">
               <div class="blog-content">
-                <span id="post-date" class="meta"></span>
+                <div class="post-stats">
+                  <span id="post-date" class="meta"></span>
+                  <span id="post-view-count" class="view-count" hidden><i class="fa-regular fa-eye" aria-hidden="true"></i><span data-view-count-value></span></span>
+                </div>
                 <h1 id="post-title"></h1>
                 <div id="post-body"></div>
               </div>
@@ -111,6 +115,7 @@
       </div>
     </main>
 
+    <script src="/blog-views.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
       function qs(name){
@@ -149,6 +154,9 @@
           document.getElementById('post-title').textContent = fm.title || 'Untitled';
           document.getElementById('post-date').textContent = fm.date || '';
           document.getElementById('post-body').innerHTML = marked.parse(body);
+          window.BlogViews.increment(slug).then(count => {
+            window.BlogViews.renderCount(document.getElementById('post-view-count'), count);
+          }).catch(() => {});
         }).catch(err => {
           document.getElementById('post').innerHTML = '<p>Could not load post.</p>';
         });
