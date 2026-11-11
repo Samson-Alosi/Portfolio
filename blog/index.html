@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/style.css">
-    <script src="/supabase-config.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../supabase-config.js"></script>
     <!-- Google Analytics: Global site tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0S1QR9VQ7S"></script>
     <script>
@@ -24,8 +24,8 @@
     <header class="site-header">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container nav-inner">
-          <a class="navbar-brand" href="/index.html#home">
-            <img class="nav-brand-icon" src="/new%20photos/Hagy%20Images%20Studio%200788360437.jpg.jpeg" alt="" />
+          <a class="navbar-brand" href="../index.html#home">
+            <img class="nav-brand-icon" src="../new%20photos/Hagy%20Images%20Studio%200788360437.jpg.jpeg" alt="" />
             <span class="brand-copy">
               <span class="brand-mark">Samson Alosi Obongo</span>
               <small>Student - Clinical Psychology</small>
@@ -36,11 +36,11 @@
           </button>
           <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a class="nav-link" href="/index.html#home"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="/index.html#services"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Services</a></li>
-              <li class="nav-item"><a class="nav-link" href="/index.html#about"><i class="fa-solid fa-user" aria-hidden="true"></i> About</a></li>
-              <li class="nav-item"><a class="nav-link" href="/index.html#contact"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Contact</a></li>
-              <li class="nav-item"><a class="nav-link active" href="/blog/" aria-current="page"><i class="fa-solid fa-newspaper" aria-hidden="true"></i> Blog</a></li>
+              <li class="nav-item"><a class="nav-link" href="../index.html#home"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="../index.html#services"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="../index.html#about"><i class="fa-solid fa-user" aria-hidden="true"></i> About</a></li>
+              <li class="nav-item"><a class="nav-link" href="../index.html#contact"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Contact</a></li>
+              <li class="nav-item"><a class="nav-link active" href="./" aria-current="page"><i class="fa-solid fa-newspaper" aria-hidden="true"></i> Blog</a></li>
             </ul>
             <a href="https://calendly.com/samsonalosi96/clinical-consultation" class="btn btn-primary nav-cta" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Book a session</a>
           </div>
@@ -64,12 +64,12 @@
       </div>
     </main>
 
-    <script src="/blog-views.js"></script>
+    <script src="../blog-views.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
       // Load posts index generated at /posts/index.json
       const postsEl = document.getElementById('posts');
-      fetch('/posts/index.json').then(r=>{
+      fetch('../posts/index.json').then(r=>{
         if(!r.ok) throw new Error('posts index not found');
         return r.json();
       }).then(posts => {
@@ -97,7 +97,7 @@
           const title = document.createElement('h3');
           const titleLink = document.createElement('a');
           titleLink.className = 'blog-title-link';
-          titleLink.href = `/blog/post.html?post=${encodeURIComponent(p.slug || '')}`;
+          titleLink.href = `post.html?post=${encodeURIComponent(p.slug || '')}`;
           titleLink.textContent = p.title || 'Untitled';
           title.appendChild(titleLink);
           const excerpt = document.createElement('p');
@@ -120,6 +120,6 @@
         postsEl.innerHTML = '<div class="col-12"><p>No posts found.</p></div>';
       });
     </script>
-    <script src="/script.js"></script>
+    <script src="../script.js"></script>
   </body>
 </html>
