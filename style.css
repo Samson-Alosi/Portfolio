@@ -721,6 +721,81 @@ blockquote footer {
   background: linear-gradient(180deg, #f7f0ee 0%, #f3e8e3 100%);
 }
 
+.crisis-alert {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.1rem;
+  margin: 2rem auto 0;
+  padding: 1.25rem 1.5rem;
+  border: 2px solid #9a3e48;
+  border-radius: 20px;
+  background: linear-gradient(110deg, #71323e, #8b3c46);
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(83, 50, 58, 0.2);
+}
+
+.crisis-alert-icon {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  font-size: 1.35rem;
+}
+
+.crisis-alert-copy p {
+  margin: 0;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.crisis-alert-copy .crisis-alert-label {
+  margin-bottom: 0.15rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.crisis-alert-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.crisis-alert-button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1rem;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  background: #fff;
+  color: #53323a;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.crisis-alert-button:hover,
+.crisis-alert-button:focus-visible {
+  background: #f3e8e3;
+  color: #3d2229;
+  text-decoration: underline !important;
+}
+
+.crisis-alert-button-secondary {
+  background: transparent;
+  color: #fff;
+}
+
+.crisis-alert-button-secondary:hover,
+.crisis-alert-button-secondary:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
 .helpline-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -1049,6 +1124,14 @@ blockquote footer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .crisis-alert {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .crisis-alert-actions {
+    grid-column: 2;
+  }
+
   .portrait-card img {
     height: 540px;
   }
@@ -1140,6 +1223,19 @@ blockquote footer {
     grid-template-columns: 1fr;
   }
 
+  .crisis-alert {
+    grid-template-columns: auto minmax(0, 1fr);
+    padding: 1rem;
+  }
+
+  .crisis-alert-actions {
+    grid-column: 1 / -1;
+  }
+
+  .crisis-alert-button {
+    flex: 1;
+  }
+
   .contact-details div {
     align-items: flex-start;
     flex-wrap: wrap;
@@ -1176,6 +1272,5 @@ blockquote footer {
 }
 .whatsapp-float:hover { transform: translateY(-2px); }
 .whatsapp-float i { font-size: 22px; }
-
 
 
