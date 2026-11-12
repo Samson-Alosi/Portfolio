@@ -381,8 +381,12 @@
             </div>
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="Tell me a little about what you are going through." required></textarea>
+              <textarea id="message" name="message" rows="4" aria-describedby="form-privacy-note" placeholder="Briefly describe what you would like to discuss. Please do not include sensitive details." required></textarea>
             </div>
+            <p class="form-privacy-note" id="form-privacy-note">
+              <i class="fa-solid fa-shield-heart" aria-hidden="true"></i>
+              Please do not include sensitive personal or health details. Read the <a href="./privacy.html">privacy information</a> before submitting.
+            </p>
             <button type="submit" class="btn btn-primary btn-block">Send inquiry</button>
           </form>
         </div>
@@ -400,6 +404,7 @@
           <a href="#services">Services</a>
           <a href="#blog">Blog</a>
           <a href="#contact">Contact</a>
+          <a href="./privacy.html">Privacy</a>
         </div>
         <div class="socials">
           <a href="https://web.facebook.com/psalm.chrisam/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>

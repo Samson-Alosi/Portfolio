@@ -876,6 +876,64 @@ blockquote footer {
   box-shadow: 0 0 0 3px rgba(122, 79, 88, 0.12);
 }
 
+.form-privacy-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin: 0.2rem 0 1rem;
+  padding: 0.85rem 0.95rem;
+  border-left: 3px solid var(--primary);
+  background: var(--surface-soft);
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.form-privacy-note i {
+  margin-top: 0.2rem;
+  color: var(--primary);
+}
+
+.form-privacy-note a,
+.privacy-content a {
+  color: var(--primary-dark);
+  font-weight: 700;
+  text-decoration: underline !important;
+  text-underline-offset: 0.15em;
+}
+
+.privacy-page {
+  max-width: 860px;
+}
+
+.privacy-content {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(71, 42, 48, 0.05);
+}
+
+.privacy-content h1,
+.privacy-content h2 {
+  color: var(--primary-dark);
+}
+
+.privacy-content h1 {
+  font-size: clamp(2.4rem, 6vw, 3.4rem);
+}
+
+.privacy-content h2 {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+
+.privacy-warning {
+  padding: 1rem 1.1rem;
+  border-left: 3px solid var(--primary);
+  background: var(--surface-soft);
+}
+
 .btn-block {
   width: 100%;
   margin-top: 0.8rem;
