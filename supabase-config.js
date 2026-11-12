@@ -1,4 +1,4 @@
 window.SUPABASE_CONFIG = {
   url: 'https://vqmdguvminutfyvqzbpo.supabase.co',
-  anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZxbWRndXZtaW51dF9meXZxemJvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcyNDYwNzgsImV4cCI6MjEwMjgyMjA3OH0.XM64deRPG1j_Ix5RjUN4QBKwypLb7Cyt4o3vy1e4M00'
+  publishableKey: 'sb_publishable_YyYnp_JqOPgFWP4RAtlQQA_AFIrZI4C'
 };

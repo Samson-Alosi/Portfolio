@@ -1,7 +1,7 @@
 (function () {
   function getConfig() {
     const config = window.SUPABASE_CONFIG || {};
-    if (!config.url || !config.anonKey) {
+    if (!config.url || !config.publishableKey) {
       throw new Error('Supabase is not configured.');
     }
     return config;
@@ -10,8 +10,7 @@
   function requestHeaders() {
     const config = getConfig();
     return {
-      apikey: config.anonKey,
-      Authorization: `Bearer ${config.anonKey}`,
+      apikey: config.publishableKey,
       'Content-Type': 'application/json'
     };
   }

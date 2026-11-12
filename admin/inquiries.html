@@ -42,7 +42,7 @@
     <script>
       window.SUPABASE_CONFIG = {
         url: 'https://vqmdguvminutfyvqzbpo.supabase.co',
-        anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZxbWRndXZtaW51dGZ5dnF6YnBvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcyNDYwNzgsImV4cCI6MjEwMjgyMjA3OH0.XM64deRPG1j_Ix5RjUN4QBKwypLb7Cyt4o3vy1e4M00'
+          publishableKey: 'sb_publishable_YyYnp_JqOPgFWP4RAtlQQA_AFIrZI4C'
       };
 
       const statusEl = document.getElementById('status');
@@ -50,19 +50,18 @@
 
       async function loadInquiries() {
         const config = window.SUPABASE_CONFIG || {};
-        const hasSupabase = config.url && config.anonKey && !config.url.includes('YOUR_PROJECT_REF') && !config.anonKey.includes('YOUR_SUPABASE_ANON_KEY');
+        const hasSupabase = config.url && config.publishableKey;
 
         if (!hasSupabase) {
           statusEl.className = 'status alert alert-warning';
-          statusEl.textContent = 'Supabase is not configured yet. Add your project URL and anon key to this page to view inquiries.';
+          statusEl.textContent = 'Supabase is not configured yet. Add the project URL and publishable key to this page to view inquiries.';
           return;
         }
 
         try {
           const response = await fetch(`${config.url}/rest/v1/inquiries?select=*`, {
             headers: {
-              apikey: config.anonKey,
-              Authorization: `Bearer ${config.anonKey}`
+              apikey: config.publishableKey
             }
           });
 

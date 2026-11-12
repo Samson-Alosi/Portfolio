@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (contactForm) {
     const saveInquiryToSupabase = async function (payload) {
       const config = window.SUPABASE_CONFIG || {};
-      const hasSupabase = config.url && config.anonKey && !config.url.includes('YOUR_PROJECT_REF') && !config.anonKey.includes('YOUR_SUPABASE_ANON_KEY');
+      const hasSupabase = config.url && config.publishableKey;
 
       if (!hasSupabase) {
         return false;
@@ -29,8 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          apikey: config.anonKey,
-          Authorization: `Bearer ${config.anonKey}`
+          apikey: config.publishableKey
         },
         body: JSON.stringify({
           ...payload,
