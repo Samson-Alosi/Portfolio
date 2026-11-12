@@ -1,5 +1,19 @@
 [
   {
+    "slug": "adolescent-stress-support",
+    "title": "Supporting adolescents who are under stress",
+    "date": "2026-11-12",
+    "excerpt": "Common sources and signs of adolescent stress, plus practical ways adults can offer steady support.",
+    "author": "Samson Alosi Obongo"
+  },
+  {
+    "slug": "exercise-mental-physical-health",
+    "title": "How exercise supports mental and physical health",
+    "date": "2026-11-12",
+    "excerpt": "Explore how regular movement can support mood, sleep, strength, heart health, and everyday wellbeing.",
+    "author": "Samson Alosi Obongo"
+  },
+  {
     "slug": "anxiety-signs",
     "title": "How to recognize anxiety before it takes over your day",
     "date": "2026-08-18",
@@ -18,6 +32,13 @@
     "title": "Small rituals that help reset your nervous system",
     "date": "2026-08-18",
     "excerpt": "Gentle habits that help calm stress, increase grounding, and restore balance throughout the day.",
+    "author": "Samson Alosi Obongo"
+  },
+  {
+    "slug": "sample-first-post",
+    "title": "Understanding anxiety: small steps you can take",
+    "date": "2026-08-18",
+    "excerpt": "Practical ways to notice and manage early anxiety signs.",
     "author": "Samson Alosi Obongo"
   }
 ]
