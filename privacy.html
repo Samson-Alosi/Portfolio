@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container nav-inner">
@@ -28,7 +29,7 @@
       </nav>
     </header>
 
-    <main class="section">
+    <main class="section" id="main-content" tabindex="-1">
       <article class="container privacy-page privacy-content">
         <p class="eyebrow">Website information</p>
         <h1>Privacy information</h1>
@@ -54,5 +55,6 @@
     </main>
 
     <script src="./script.js"></script>
+    <script src="./accessibility.js"></script>
   </body>
 </html>

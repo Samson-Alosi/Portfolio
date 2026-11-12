@@ -22,6 +22,7 @@
       <script src="./supabase-config.js"></script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container nav-inner">
@@ -49,7 +50,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
       <section class="hero" id="home">
         <div class="container">
           <div class="row align-items-center hero-row">
@@ -437,6 +438,7 @@
       }).catch(function () {});
     </script>
     <script src="script.js"></script>
+    <script src="accessibility.js"></script>
     <!-- WhatsApp floating button -->
     <a href="https://wa.me/250795689260?text=Hi%20Samson%2C%20I%27d%20like%20to%20talk%20about%20my%20mental%20health" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
       <i class="fa-brands fa-whatsapp"></i>

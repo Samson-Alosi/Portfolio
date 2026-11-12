@@ -17,6 +17,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: calc(100% * var(--a11y-font-scale, 1));
 }
 
 body {
@@ -58,6 +59,25 @@ p {
 
 .section {
   padding: 100px 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0.75rem;
+  left: -9999px;
+  z-index: 11001;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  background: #000;
+  color: #fff;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  color: #fff;
+  outline: 3px solid #005fcc;
+  outline-offset: 3px;
 }
 
 .container {
@@ -666,7 +686,176 @@ p {
   font-size: 0.75rem;
 }
 
+.a11y-toolbar {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 11000;
+  font-family: "Inter", sans-serif;
+}
+
+.a11y-toolbar button {
+  min-height: 44px;
+  border: 2px solid #53323a;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.a11y-toolbar button:focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 3px;
+}
+
+.a11y-toolbar-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1rem;
+  background: #53323a;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.a11y-toolbar-panel {
+  width: min(20rem, calc(100vw - 2rem));
+  margin-bottom: 0.65rem;
+  padding: 1rem;
+  border: 2px solid #53323a;
+  border-radius: 14px;
+  background: #fff;
+  color: #1b1b1b;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.22);
+}
+
+.a11y-toolbar-panel[hidden] {
+  display: none;
+}
+
+.a11y-toolbar-panel h2 {
+  margin: 0 0 0.8rem;
+  color: #1b1b1b;
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+}
+
+.a11y-text-controls {
+  display: grid;
+  grid-template-columns: 3rem 1fr 3rem;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+  text-align: center;
+}
+
+.a11y-text-controls button,
+.a11y-option,
+.a11y-reset {
+  background: #fff;
+  color: #1b1b1b;
+}
+
+.a11y-text-controls button:disabled {
+  border-color: #767676;
+  color: #595959;
+  cursor: not-allowed;
+}
+
+.a11y-option,
+.a11y-reset {
+  width: 100%;
+  margin-top: 0.55rem;
+  padding: 0.55rem 0.75rem;
+  text-align: left;
+}
+
+.a11y-option[aria-pressed="true"] {
+  background: #53323a;
+  color: #fff;
+}
+
+.a11y-reset {
+  border-color: #767676 !important;
+}
+
+body.a11y-underline-links a {
+  text-decoration: underline !important;
+  text-underline-offset: 0.15em;
+}
+
+body.a11y-high-contrast {
+  background: #fff !important;
+  background-image: none !important;
+  color: #000 !important;
+}
+
+body.a11y-high-contrast :where(h1, h2, h3, h4, h5, p, li, label, strong, span, small, figcaption, .eyebrow, .lead, .meta) {
+  color: #000 !important;
+}
+
+body.a11y-high-contrast :where(.site-header, .navbar, .hero, .about, .services, .testimonials, .contact, .helpline-section, .service-card, .step-card, .blog-card, .contact-form, .contact-details, .helpline-card, .helpline-note, blockquote) {
+  border-color: #000 !important;
+  background: #fff !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+body.a11y-high-contrast a {
+  color: #0000a8 !important;
+}
+
+body.a11y-high-contrast .btn-primary,
+body.a11y-high-contrast .crisis-alert {
+  border-color: #000 !important;
+  background: #000 !important;
+  color: #fff !important;
+}
+
+body.a11y-high-contrast button:not(.a11y-toolbar button) {
+  border-color: #000 !important;
+  background: #fff !important;
+  color: #000 !important;
+}
+
+body.a11y-high-contrast .crisis-alert :where(*) {
+  color: #fff !important;
+}
+
+body.a11y-high-contrast .crisis-alert-button {
+  border-color: #fff !important;
+  background: #fff !important;
+  color: #000 !important;
+}
+
+body.a11y-high-contrast .a11y-toolbar,
+body.a11y-high-contrast .a11y-toolbar :where(*) {
+  color: #1b1b1b !important;
+}
+
+body.a11y-high-contrast .a11y-toolbar-toggle {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+body.a11y-high-contrast .a11y-toolbar-toggle :where(*) {
+  color: #fff !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
   .blog-title-link {
     transition: none;
   }
@@ -1272,5 +1461,3 @@ blockquote footer {
 }
 .whatsapp-float:hover { transform: translateY(-2px); }
 .whatsapp-float i { font-size: 22px; }
-
-
