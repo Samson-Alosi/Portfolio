@@ -1,44 +1,100 @@
 [
   {
+    "slug": "stress-check-in",
+    "title": "A two-minute stress check-in: notice, pause, choose one small step",
+    "date": "2026-11-23",
+    "excerpt": "A brief, private reflection tool to notice what feels difficult and choose one gentle next step. It is not a test or diagnosis.",
+    "author": "Samson Alosi Obongo",
+    "featured": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Nyungwe_National_Park.jpg/960px-Nyungwe_National_Park.jpg",
+    "imageAlt": "Entrance to Nyungwe Forest National Park in Rwanda.",
+    "imageCredit": "Ivan Mucyo",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Nyungwe_National_Park.jpg",
+    "imageLicense": "CC BY-SA 4.0",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  {
     "slug": "adolescent-stress-support",
     "title": "Supporting adolescents who are under stress",
     "date": "2026-11-12",
     "excerpt": "Common sources and signs of adolescent stress, plus practical ways adults can offer steady support.",
-    "author": "Samson Alosi Obongo"
+    "author": "Samson Alosi Obongo",
+    "featured": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/A_young_boy_studies_at_home_during_the_2020_Covid_19_Lockdown.jpg/960px-A_young_boy_studies_at_home_during_the_2020_Covid_19_Lockdown.jpg",
+    "imageAlt": "A young Ugandan student studies at home.",
+    "imageCredit": "Vanmulondo",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:A_young_boy_studies_at_home_during_the_2020_Covid_19_Lockdown.jpg",
+    "imageLicense": "CC BY-SA 4.0",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
   {
     "slug": "exercise-mental-physical-health",
     "title": "How exercise supports mental and physical health",
     "date": "2026-11-12",
     "excerpt": "Explore how regular movement can support mood, sleep, strength, heart health, and everyday wellbeing.",
-    "author": "Samson Alosi Obongo"
+    "author": "Samson Alosi Obongo",
+    "featured": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/WRAIR-Africa_hosts_Army_Ten_Miler_Shadow_Run_in_Western_Kenya_%289468240%29.jpg",
+    "imageAlt": "Participants take part in a running event in western Kenya.",
+    "imageCredit": "U.S. Army / WRAIR-Africa",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:WRAIR-Africa_hosts_Army_Ten_Miler_Shadow_Run_in_Western_Kenya_(9468240).jpg",
+    "imageLicense": "Public domain",
+    "imageLicenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-USGov-Military-Army"
   },
   {
     "slug": "anxiety-signs",
     "title": "How to recognize anxiety before it takes over your day",
     "date": "2026-08-18",
     "excerpt": "Simple signs of anxiety and practical ways to respond before it grows overwhelming.",
-    "author": "Samson Alosi Obongo"
+    "author": "Samson Alosi Obongo",
+    "featured": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/African_student_studying_at_dormitory_from_tablet_computer%2C.jpg/960px-African_student_studying_at_dormitory_from_tablet_computer%2C.jpg",
+    "imageAlt": "An African student studies at a tablet in a dormitory.",
+    "imageCredit": "Tinsae Belay",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:African_student_studying_at_dormitory_from_tablet_computer,.jpg",
+    "imageLicense": "CC BY-SA 4.0",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
   {
     "slug": "communication-conflict",
     "title": "Three ways to communicate more openly during conflict",
     "date": "2026-08-18",
     "excerpt": "Practical ways to speak honestly, listen well, and reduce defensiveness during conflict.",
-    "author": "Samson Alosi Obongo"
+    "author": "Samson Alosi Obongo",
+    "featured": false,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Evening_lounging_-_Jonathan_Soren_Davidson_for_Disabled_And_Here.jpg/960px-Evening_lounging_-_Jonathan_Soren_Davidson_for_Disabled_And_Here.jpg",
+    "imageAlt": "Illustration of three Black friends sharing a relaxed conversation.",
+    "imageCredit": "Jonathan Soren Davidson for Disabled And Here",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Evening_lounging_-_Jonathan_Soren_Davidson_for_Disabled_And_Here.jpg",
+    "imageLicense": "CC BY 4.0",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
   {
     "slug": "nervous-system-reset",
     "title": "Small rituals that help reset your nervous system",
     "date": "2026-08-18",
     "excerpt": "Gentle habits that help calm stress, increase grounding, and restore balance throughout the day.",
-    "author": "Samson Alosi Obongo"
+    "author": "Samson Alosi Obongo",
+    "featured": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Kivu%2CGoma_and_Rubavu_On_Rwanda_Side.jpg/960px-Kivu%2CGoma_and_Rubavu_On_Rwanda_Side.jpg",
+    "imageAlt": "View across Lake Kivu toward Rubavu, Rwanda.",
+    "imageCredit": "Ericnkurunziza",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Kivu,Goma_and_Rubavu_On_Rwanda_Side.jpg",
+    "imageLicense": "CC BY-SA 4.0",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
   {
     "slug": "sample-first-post",
     "title": "Understanding anxiety: small steps you can take",
     "date": "2026-08-18",
     "excerpt": "Practical ways to notice and manage early anxiety signs.",
-    "author": "Samson Alosi Obongo"
+    "author": "Samson Alosi Obongo",
+    "featured": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/African_students_preparing_for_a_test.jpg/960px-African_students_preparing_for_a_test.jpg",
+    "imageAlt": "African students preparing together for a test.",
+    "imageCredit": "Excelz",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:African_students_preparing_for_a_test.jpg",
+    "imageLicense": "CC BY-SA 4.0",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   }
 ]

@@ -32,9 +32,16 @@ function buildIndex(){
       title: meta.title || slug,
       date: meta.date || null,
       excerpt: meta.excerpt || null,
-      author: meta.author || null
+      author: meta.author || null,
+      featured: meta.featured === 'true',
+      image: meta.image || null,
+      imageAlt: meta.imageAlt || null,
+      imageCredit: meta.imageCredit || null,
+      imageSource: meta.imageSource || null,
+      imageLicense: meta.imageLicense || null,
+      imageLicenseUrl: meta.imageLicenseUrl || null
     };
-  }).sort((a,b)=> (b.date||'').localeCompare(a.date||''));
+  }).sort((a,b)=> Number(b.featured) - Number(a.featured) || (b.date||'').localeCompare(a.date||''));
 
   fs.writeFileSync(outFile, JSON.stringify(items, null, 2), 'utf8');
   console.log('Wrote', outFile);

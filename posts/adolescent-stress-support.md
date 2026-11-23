@@ -3,6 +3,12 @@ title: "Supporting adolescents who are under stress"
 date: "2026-11-12"
 author: "Samson Alosi Obongo"
 excerpt: "Common sources and signs of adolescent stress, plus practical ways adults can offer steady support."
+image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/A_young_boy_studies_at_home_during_the_2020_Covid_19_Lockdown.jpg/960px-A_young_boy_studies_at_home_during_the_2020_Covid_19_Lockdown.jpg"
+imageAlt: "A young Ugandan student studies at home."
+imageCredit: "Vanmulondo"
+imageSource: "https://commons.wikimedia.org/wiki/File:A_young_boy_studies_at_home_during_the_2020_Covid_19_Lockdown.jpg"
+imageLicense: "CC BY-SA 4.0"
+imageLicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
 ---
 
 <div class="article-meta">

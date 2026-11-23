@@ -61,6 +61,10 @@
                   <span id="post-view-count" class="view-count" hidden><i class="fa-regular fa-eye" aria-hidden="true"></i><span data-view-count-value></span></span>
                 </div>
                 <h1 id="post-title"></h1>
+                <figure class="post-hero-image" id="post-hero-image" hidden>
+                  <img id="post-hero-image-src" alt="">
+                  <figcaption id="post-hero-image-credit"></figcaption>
+                </figure>
                 <div id="post-body"></div>
               </div>
             </article>
@@ -118,6 +122,7 @@
 
     <script src="../blog-views.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="../stress-checkin.js"></script>
     <script>
       function qs(name){
         const params = new URLSearchParams(location.search);
@@ -154,6 +159,29 @@
 
           document.getElementById('post-title').textContent = fm.title || 'Untitled';
           document.getElementById('post-date').textContent = fm.date || '';
+          if (fm.image) {
+            const imageFigure = document.getElementById('post-hero-image');
+            const image = document.getElementById('post-hero-image-src');
+            const caption = document.getElementById('post-hero-image-credit');
+            image.src = fm.image;
+            image.alt = fm.imageAlt || '';
+            image.loading = 'eager';
+            image.decoding = 'async';
+            if (fm.imageCredit && fm.imageSource && fm.imageLicense && fm.imageLicenseUrl) {
+              const sourceLink = document.createElement('a');
+              sourceLink.href = fm.imageSource;
+              sourceLink.target = '_blank';
+              sourceLink.rel = 'noopener noreferrer';
+              sourceLink.textContent = `Image: ${fm.imageCredit}`;
+              const licenseLink = document.createElement('a');
+              licenseLink.href = fm.imageLicenseUrl;
+              licenseLink.target = '_blank';
+              licenseLink.rel = 'noopener noreferrer';
+              licenseLink.textContent = fm.imageLicense;
+              caption.append(sourceLink, document.createTextNode(' · '), licenseLink);
+            }
+            imageFigure.hidden = false;
+          }
           document.getElementById('post-body').innerHTML = marked.parse(body);
           window.BlogViews.increment(slug).then(count => {
             window.BlogViews.renderCount(document.getElementById('post-view-count'), count);
@@ -193,8 +221,9 @@
       }
     </script>
     <!-- WhatsApp floating button -->
-    <a href="https://wa.me/250795689260?text=Hi%20Samson%2C%20I%27d%20like%20to%20talk%20about%20my%20mental%20health" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-      <i class="fa-brands fa-whatsapp"></i>
+    <a href="https://wa.me/250795689260?text=Hi%20Samson%2C%20I%27d%20like%20to%20talk%20about%20my%20mental%20health" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Us">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+      <span>WhatsApp Us</span>
     </a>
     <script src="../script.js"></script>
     <script src="../accessibility.js"></script>

@@ -3,6 +3,12 @@ title: "How exercise supports mental and physical health"
 date: "2026-11-12"
 author: "Samson Alosi Obongo"
 excerpt: "Explore how regular movement can support mood, sleep, strength, heart health, and everyday wellbeing."
+image: "https://upload.wikimedia.org/wikipedia/commons/9/92/WRAIR-Africa_hosts_Army_Ten_Miler_Shadow_Run_in_Western_Kenya_%289468240%29.jpg"
+imageAlt: "Participants take part in a running event in western Kenya."
+imageCredit: "U.S. Army / WRAIR-Africa"
+imageSource: "https://commons.wikimedia.org/wiki/File:WRAIR-Africa_hosts_Army_Ten_Miler_Shadow_Run_in_Western_Kenya_(9468240).jpg"
+imageLicense: "Public domain"
+imageLicenseUrl: "https://commons.wikimedia.org/wiki/Template:PD-USGov-Military-Army"
 ---
 
 <div class="article-meta">

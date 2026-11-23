@@ -79,9 +79,43 @@
           const col = document.createElement('div');
           col.className = 'col-lg-4 col-md-6';
           const article = document.createElement('article');
-          article.className = 'blog-card';
+          article.className = p.featured ? 'blog-card blog-card-featured' : 'blog-card';
           const content = document.createElement('div');
           content.className = 'blog-content';
+          if (p.image) {
+            const figure = document.createElement('figure');
+            figure.className = 'blog-image';
+            const image = document.createElement('img');
+            image.src = p.image;
+            image.alt = p.imageAlt || '';
+            image.loading = 'lazy';
+            image.decoding = 'async';
+            image.width = 800;
+            image.height = 600;
+            figure.appendChild(image);
+            if (p.imageCredit && p.imageSource && p.imageLicense && p.imageLicenseUrl) {
+              const caption = document.createElement('figcaption');
+              const sourceLink = document.createElement('a');
+              sourceLink.href = p.imageSource;
+              sourceLink.target = '_blank';
+              sourceLink.rel = 'noopener noreferrer';
+              sourceLink.textContent = `Image: ${p.imageCredit}`;
+              const licenseLink = document.createElement('a');
+              licenseLink.href = p.imageLicenseUrl;
+              licenseLink.target = '_blank';
+              licenseLink.rel = 'noopener noreferrer';
+              licenseLink.textContent = p.imageLicense;
+              caption.append(sourceLink, document.createTextNode(' · '), licenseLink);
+              figure.appendChild(caption);
+            }
+            article.appendChild(figure);
+          }
+          if (p.featured) {
+            const featuredLabel = document.createElement('span');
+            featuredLabel.className = 'featured-label';
+            featuredLabel.textContent = 'Featured self-reflection';
+            content.appendChild(featuredLabel);
+          }
           const date = document.createElement('span');
           date.className = 'meta';
           date.textContent = p.date || '';
@@ -121,6 +155,7 @@
         postsEl.innerHTML = '<div class="col-12"><p>No posts found.</p></div>';
       });
     </script>
+    <script src="../stress-checkin.js"></script>
     <script src="../script.js"></script>
     <script src="../accessibility.js"></script>
   </body>

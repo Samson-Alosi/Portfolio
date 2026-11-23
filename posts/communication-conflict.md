@@ -3,6 +3,12 @@ title: "Three ways to communicate more openly during conflict"
 date: "2026-08-18"
 author: "Samson Alosi Obongo"
 excerpt: "Practical ways to speak honestly, listen well, and reduce defensiveness during conflict."
+image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Evening_lounging_-_Jonathan_Soren_Davidson_for_Disabled_And_Here.jpg/960px-Evening_lounging_-_Jonathan_Soren_Davidson_for_Disabled_And_Here.jpg"
+imageAlt: "Illustration of three Black friends sharing a relaxed conversation."
+imageCredit: "Jonathan Soren Davidson for Disabled And Here"
+imageSource: "https://commons.wikimedia.org/wiki/File:Evening_lounging_-_Jonathan_Soren_Davidson_for_Disabled_And_Here.jpg"
+imageLicense: "CC BY 4.0"
+imageLicenseUrl: "https://creativecommons.org/licenses/by/4.0/"
 ---
 
 <div class="article-meta">

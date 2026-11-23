@@ -3,6 +3,12 @@ title: "Small rituals that help reset your nervous system"
 date: "2026-08-18"
 author: "Samson Alosi Obongo"
 excerpt: "Gentle habits that help calm stress, increase grounding, and restore balance throughout the day."
+image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Kivu%2CGoma_and_Rubavu_On_Rwanda_Side.jpg/960px-Kivu%2CGoma_and_Rubavu_On_Rwanda_Side.jpg"
+imageAlt: "View across Lake Kivu toward Rubavu, Rwanda."
+imageCredit: "Ericnkurunziza"
+imageSource: "https://commons.wikimedia.org/wiki/File:Kivu,Goma_and_Rubavu_On_Rwanda_Side.jpg"
+imageLicense: "CC BY-SA 4.0"
+imageLicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
 ---
 
 <div class="article-meta">

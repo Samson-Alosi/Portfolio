@@ -3,6 +3,12 @@ title: "How to recognize anxiety before it takes over your day"
 date: "2026-08-18"
 author: "Samson Alosi Obongo"
 excerpt: "Simple signs of anxiety and practical ways to respond before it grows overwhelming."
+image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/African_student_studying_at_dormitory_from_tablet_computer%2C.jpg/960px-African_student_studying_at_dormitory_from_tablet_computer%2C.jpg"
+imageAlt: "An African student studies at a tablet in a dormitory."
+imageCredit: "Tinsae Belay"
+imageSource: "https://commons.wikimedia.org/wiki/File:African_student_studying_at_dormitory_from_tablet_computer,.jpg"
+imageLicense: "CC BY-SA 4.0"
+imageLicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
 ---
 
 <div class="article-meta">
