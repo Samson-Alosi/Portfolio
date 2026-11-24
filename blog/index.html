@@ -132,7 +132,7 @@
           const title = document.createElement('h3');
           const titleLink = document.createElement('a');
           titleLink.className = 'blog-title-link';
-          titleLink.href = `post.html?post=${encodeURIComponent(p.slug || '')}`;
+          titleLink.href = `${encodeURIComponent(p.slug || '')}.html`;
           titleLink.textContent = p.title || 'Untitled';
           title.appendChild(titleLink);
           const excerpt = document.createElement('p');

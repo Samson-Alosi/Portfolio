@@ -13,12 +13,12 @@ Netlify CMS setup (quick notes)
    - This repository includes one example post at `/posts/sample-first-post.md`.
 
 4. Rendering
-   - This site renders posts client-side: `/blog/post.html?post=sample-first-post` will load `/posts/sample-first-post.md` and render it.
+   - This site renders posts client-side from `/posts/<slug>.md`.
+   - Run `npm run build-posts-index` after adding or editing a post. It updates `/posts/index.json` and `/sitemap.xml`, and generates a static `/blog/<slug>.html` page with Open Graph and Twitter Card metadata for social previews.
+   - Use `/blog/<slug>.html` links when sharing posts so social platforms can display the assigned image, title, and description. The older `/blog/post.html?post=<slug>` route remains available for compatibility.
    - To add new posts via CMS and have them appear in the blog list automatically, update `blog/index.html`'s `posts` array or implement a posts index build step.
     - To add new posts via CMS and have them appear in the blog list automatically, implement the posts index build step below.
 
 5. Recommended next steps
-   - Add a build step to generate a JSON index of posts during deploy (Netlify build plugin or a small script) so the blog list is dynamic.
-      - This repository includes `scripts/generate-posts-index.js` and a `package.json` script `npm run build-posts-index` which writes `/posts/index.json` used by `/blog/index.html`.
-      - On Netlify, add a build command such as `npm run build-posts-index && <your existing build>` or add the script as a deploy plugin step.
+   - Ensure your Netlify build runs `npm run build-posts-index` so the post listing and social-preview pages are regenerated during deployment.
    - Add Giscus or another comment system to `blog/post.html` for engagement.

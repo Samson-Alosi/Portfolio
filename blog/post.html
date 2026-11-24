@@ -151,7 +151,7 @@
         return params.get(name);
       }
 
-      const slug = qs('post');
+      const slug = qs('post') || document.body.dataset.postSlug;
       const relatedPostsEl = document.getElementById('related-posts-list');
       if(!slug){
         document.getElementById('post').innerHTML = '<p>No post specified.</p>';
@@ -181,7 +181,9 @@
 
           document.getElementById('post-title').textContent = fm.title || 'Untitled';
           document.getElementById('post-date').textContent = fm.date || '';
-          window.initializePostSharing(fm.title || 'Untitled', window.location.href);
+          const canonicalUrl = document.querySelector('link[rel="canonical"]')?.href
+            || new URL(`${encodeURIComponent(slug)}.html`, window.location.href).href;
+          window.initializePostSharing(fm.title || 'Untitled', canonicalUrl);
           if (fm.image) {
             const imageFigure = document.getElementById('post-hero-image');
             const image = document.getElementById('post-hero-image-src');
@@ -230,7 +232,7 @@
             item.className = 'related-post-item';
             const link = document.createElement('a');
             link.className = 'related-post-link blog-title-link';
-            link.href = `post.html?post=${encodeURIComponent(post.slug)}`;
+            link.href = `${encodeURIComponent(post.slug)}.html`;
             link.textContent = post.title || 'Untitled';
             const date = document.createElement('span');
             date.className = 'related-post-date';
