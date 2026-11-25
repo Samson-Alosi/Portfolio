@@ -74,7 +74,7 @@ Consider speaking with a qualified health or mental-health professional if distr
 
 If you are in immediate danger or cannot stay safe, contact local emergency services. In Rwanda, the website lists emergency number **112** and mental-health support number **116**. This check-in is not monitored and is not an emergency service.
 
-If you would like to discuss support options, you can [book a session](https://calendly.com/samsonalosi96/clinical-consultation).
+If you would like to discuss support options, you can [book a session](https://calendly.com/samclinicalpsychologist/clinical-consultation).
 
 ### References
 
