@@ -262,34 +262,34 @@
           <div class="row blog-grid">
             <div class="col-lg-4 col-md-6">
               <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" alt="Person reflecting in calm environment" />
+                <img class="blog-card-full-image" src="./assets/blog-images/five-everyday-habits-for-stronger-mental-and-emotional-wellbeing.png" alt="Infographic summarising five everyday habits for stronger mental and emotional wellbeing" />
                 <div class="blog-content">
-                  <span class="meta">Anxiety • 5 min read</span>
-                  <span class="view-count" data-view-count="anxiety-signs" hidden><i class="fa-regular fa-eye" aria-hidden="true"></i><span data-view-count-value></span></span>
-                  <h3><a class="blog-title-link" href="./blog/anxiety-signs.html">How to recognize anxiety before it takes over your day</a></h3>
-                  <a href="./blog/anxiety-signs.html" target="_blank" rel="noopener noreferrer">Read article</a>
+                  <span class="meta">Wellbeing • 5 min read</span>
+                  <span class="view-count" data-view-count="five-everyday-habits" hidden><i class="fa-regular fa-eye" aria-hidden="true"></i><span data-view-count-value></span></span>
+                  <h3><a class="blog-title-link" href="./blog/five-everyday-habits.html">Five Everyday Habits/Tips for Stronger Mental and Emotional Wellbeing</a></h3>
+                  <a href="./blog/five-everyday-habits.html" target="_blank" rel="noopener noreferrer">Read article</a>
                 </div>
               </article>
             </div>
             <div class="col-lg-4 col-md-6">
               <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80" alt="Couple talking" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Nyungwe_National_Park.jpg/960px-Nyungwe_National_Park.jpg" alt="Entrance to Nyungwe Forest National Park in Rwanda" />
                 <div class="blog-content">
-                  <span class="meta">Relationships • 4 min read</span>
-                  <span class="view-count" data-view-count="communication-conflict" hidden><i class="fa-regular fa-eye" aria-hidden="true"></i><span data-view-count-value></span></span>
-                  <h3><a class="blog-title-link" href="./blog/communication-conflict.html">Three ways to communicate more openly during conflict</a></h3>
-                  <a href="./blog/communication-conflict.html" target="_blank" rel="noopener noreferrer">Read article</a>
+                  <span class="meta">Self-reflection • 2 min read</span>
+                  <span class="view-count" data-view-count="stress-check-in" hidden><i class="fa-regular fa-eye" aria-hidden="true"></i><span data-view-count-value></span></span>
+                  <h3><a class="blog-title-link" href="./blog/stress-check-in.html">A two-minute stress check-in: notice, pause, choose one small step</a></h3>
+                  <a href="./blog/stress-check-in.html" target="_blank" rel="noopener noreferrer">Read article</a>
                 </div>
               </article>
             </div>
             <div class="col-lg-4 col-md-6">
               <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80" alt="Woman journaling outdoors" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/WRAIR-Africa_hosts_Army_Ten_Miler_Shadow_Run_in_Western_Kenya_%289468240%29.jpg" alt="Participants taking part in a running event in western Kenya" />
                 <div class="blog-content">
-                  <span class="meta">Wellbeing • 6 min read</span>
-                  <span class="view-count" data-view-count="nervous-system-reset" hidden><i class="fa-regular fa-eye" aria-hidden="true"></i><span data-view-count-value></span></span>
-                  <h3><a class="blog-title-link" href="./blog/nervous-system-reset.html">Small rituals that help reset your nervous system</a></h3>
-                  <a href="./blog/nervous-system-reset.html" target="_blank" rel="noopener noreferrer">Read article</a>
+                  <span class="meta">Exercise • 5 min read</span>
+                  <span class="view-count" data-view-count="exercise-mental-physical-health" hidden><i class="fa-regular fa-eye" aria-hidden="true"></i><span data-view-count-value></span></span>
+                  <h3><a class="blog-title-link" href="./blog/exercise-mental-physical-health.html">How exercise supports mental and physical health</a></h3>
+                  <a href="./blog/exercise-mental-physical-health.html" target="_blank" rel="noopener noreferrer">Read article</a>
                 </div>
               </article>
             </div>
@@ -479,7 +479,7 @@
 
     <script src="./blog-views.js"></script>
     <script>
-      window.BlogViews.getCounts(['anxiety-signs', 'communication-conflict', 'nervous-system-reset']).then(function (counts) {
+      window.BlogViews.getCounts(['five-everyday-habits', 'stress-check-in', 'exercise-mental-physical-health']).then(function (counts) {
         document.querySelectorAll('[data-view-count]').forEach(function (element) {
           const count = counts[element.dataset.viewCount];
           if (Number.isFinite(count)) window.BlogViews.renderCount(element, count);

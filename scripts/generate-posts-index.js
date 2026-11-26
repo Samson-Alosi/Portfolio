@@ -40,6 +40,11 @@ function buildPostPage(post, template){
   const title = post.title || 'Untitled';
   const description = post.excerpt || '';
   const image = post.image || '';
+  const socialImage = /^https?:\/\//i.test(image)
+    ? image
+    : image
+      ? `${siteUrl}/${image.replace(/^\.\.\//, '').replace(/^\.\//, '').replace(/^\//, '')}`
+      : '';
   const imageAlt = post.imageAlt || title;
   const socialMetadata = [
     `<link rel="canonical" href="${escapeHtml(postUrl)}">`,
@@ -47,12 +52,12 @@ function buildPostPage(post, template){
     `<meta property="og:url" content="${escapeHtml(postUrl)}">`,
     `<meta property="og:title" content="${escapeHtml(title)}">`,
     `<meta property="og:description" content="${escapeHtml(description)}">`,
-    `<meta property="og:image" content="${escapeHtml(image)}">`,
+    `<meta property="og:image" content="${escapeHtml(socialImage)}">`,
     `<meta property="og:image:alt" content="${escapeHtml(imageAlt)}">`,
     `<meta name="twitter:card" content="summary_large_image">`,
     `<meta name="twitter:title" content="${escapeHtml(title)}">`,
     `<meta name="twitter:description" content="${escapeHtml(description)}">`,
-    `<meta name="twitter:image" content="${escapeHtml(image)}">`
+    `<meta name="twitter:image" content="${escapeHtml(socialImage)}">`
   ].join('\n    ');
   const page = template
     .replace('<title>Post — Samson Alosi Obongo</title>', `<title>${escapeHtml(title)} — Samson Alosi Obongo</title>`)
