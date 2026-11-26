@@ -86,6 +86,10 @@
           if (p.image) {
             const figure = document.createElement('figure');
             figure.className = 'blog-image';
+            const imageLink = document.createElement('a');
+            imageLink.className = 'blog-image-link';
+            imageLink.href = `${encodeURIComponent(p.slug || '')}.html`;
+            imageLink.setAttribute('aria-label', `Read ${p.title || 'this article'}`);
             const image = document.createElement('img');
             image.src = p.image;
             image.alt = p.imageAlt || '';
@@ -93,7 +97,8 @@
             image.decoding = 'async';
             image.width = 800;
             image.height = 600;
-            figure.appendChild(image);
+            imageLink.appendChild(image);
+            figure.appendChild(imageLink);
             if (p.imageCredit && p.imageSource && p.imageLicense && p.imageLicenseUrl) {
               const caption = document.createElement('figcaption');
               const sourceLink = document.createElement('a');
